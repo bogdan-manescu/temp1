@@ -40,7 +40,7 @@ const Navbar = () => {
         <>
             <div
                 className={`navbar ${showNavbar ? "navbar-visible" : "navbar-hidden"}`}
-                style={{ height: "87.58px" }}
+                style={{ height: "67.75px" }}
             />
             <div
                 className="mobile-menu"

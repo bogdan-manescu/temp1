@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
 import "../styles/reservations.css";
 import "react-calendar/dist/Calendar.css";
+import { useEffect } from "react";
 
 const CalendarWrapper = ({ value, setValue }) => (
     <Calendar
@@ -54,7 +55,35 @@ const Reservations = () => {
     const [checkOut, setCheckOut] = useState(undefined);
     const [showCheckIn, setShowCheckIn] = useState(false);
     const [showCheckOut, setShowCheckOut] = useState(false);
-    // const reservationsRef = useRef();
+    const [adults, setAdults] = useState(1);
+    const [children, setChildren] = useState(0);
+    const [rooms, setRooms] = useState(1);
+    const calendarRefCheckIn = useRef(null);
+    const calendarRefCheckOut = useRef(null);
+
+    const handleOutsideCalendarClick = (e) => {
+        if (!calendarRefCheckIn.current.contains(e.target)) {
+            setShowCheckIn(false);
+        } else {
+            setShowCheckIn(true);
+        }
+
+        if (!calendarRefCheckOut.current.contains(e.target)) {
+            setShowCheckOut(false);
+        } else {
+            setShowCheckOut(true);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", handleOutsideCalendarClick);
+
+        return () => {
+            document.removeEventListener("click", handleOutsideCalendarClick);
+        };
+    }, []);
+
+    console.log();
 
     return (
         <div className="reservations" id="reservation">
@@ -63,7 +92,7 @@ const Reservations = () => {
                     TRECI PRIN ZONA? REZERVA O CAMERA!
                 </h1>
                 <div className="reservations-container-content" data-aos="fade-up">
-                    <div className="reservations-container-content-item">
+                    <div ref={calendarRefCheckIn} className="reservations-container-content-item">
                         <p className="reservations-container-content-item-label">Data Check-in</p>
                         <div
                             className="reservations-container-content-item-inner"
@@ -91,7 +120,7 @@ const Reservations = () => {
                             <CalendarWrapper value={checkIn} setValue={setCheckIn} />
                         </div>
                     </div>
-                    <div className="reservations-container-content-item">
+                    <div ref={calendarRefCheckOut} className="reservations-container-content-item">
                         <p className="reservations-container-content-item-label">Data Check-out</p>
                         <div
                             className="reservations-container-content-item-inner"
@@ -124,10 +153,11 @@ const Reservations = () => {
                         <input
                             className="reservations-container-content-item-input"
                             type="number"
-                            min="0"
-                            placeholder="0"
+                            min="1"
+                            placeholder="1"
                             name="Numar adulti"
-                        ></input>
+                            onChange={(e) => setAdults(e.target.value)}
+                        />
                     </div>
                     <div className="reservations-container-content-item">
                         <p className="reservations-container-content-item-label">Numar copii</p>
@@ -137,11 +167,36 @@ const Reservations = () => {
                             min="0"
                             placeholder="0"
                             name="Numar copii"
-                        ></input>
+                            onChange={(e) => setChildren(e.target.value)}
+                        />
+                    </div>
+                    <div className="reservations-container-content-item">
+                        <p className="reservations-container-content-item-label">Numar camere</p>
+                        <input
+                            className="reservations-container-content-item-input"
+                            type="number"
+                            min="1"
+                            placeholder="1"
+                            name="Numar camere"
+                            onChange={(e) => setRooms(e.target.value)}
+                        />
                     </div>
                     <div className="reservations-container-content-item">
                         <p className="reservations-container-content-item-label">&nbsp;</p>
-                        <button className="content-cta">REZERVA</button>
+                        <a
+                            href={`https://www.booking.com/hotel/ro/pensiunea-gabriel.ro.html?checkin=${checkIn?.getFullYear()}-${
+                                checkIn?.getMonth() + 1
+                            }-${checkIn?.getDate()};checkout=${checkOut?.getFullYear()}-${
+                                checkOut?.getMonth() + 1
+                            }-${checkOut?.getDate()};dest_id=-1156625;dest_type=city;hapos=1;hpos=1;dist=0;group_adults=${adults};req_adults=${adults};group_children=${children};req_children=${children};no_rooms=${rooms};${Array.from(
+                                { length: children },
+                                (el) => "req_age=12;"
+                            ).join("")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className="content-cta">REZERVA</button>
+                        </a>
                     </div>
                 </div>
             </div>

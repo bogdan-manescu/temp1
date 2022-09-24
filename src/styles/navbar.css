@@ -2,10 +2,10 @@
     z-index: 5;
     position: fixed;
     width: 100%;
-    padding-block: 20px;
+    padding-block: 10px;
     padding-inline: 30px;
     background-color: rgb(0, 0, 0, 0.7);
-    transition: top 0.4s ease-in-out;
+    transition: top 0.45s ease-out;
 }
 
 .navbar-visible {
@@ -18,7 +18,7 @@
 
 .navbar-top {
     background-color: transparent;
-    transition: top 0.6s ease-in-out;
+    transition: top 0.6s ease-out;
 }
 
 .navbar-container {
@@ -33,7 +33,7 @@
 }
 
 .navbar-logo img {
-    width: 110px;
+    width: 90px;
     height: 100%;
 }
 
@@ -69,11 +69,11 @@
     margin-inline: 5px;
     display: inline-block;
     padding-bottom: 2px;
-    background-image: linear-gradient(var(--color-bg) 0 0);
+    /* background-image: linear-gradient(var(--color-bg) 0 0);
     background-position: 0 100%;
     background-size: 0% 1px;
     background-repeat: no-repeat;
-    transition: background-size 0.3s, background-position 0s 0.3s;
+    transition: background-size 0.3s, background-position 0s 0.3s; */
 }
 
 .navbar-menu-link:first-child {
