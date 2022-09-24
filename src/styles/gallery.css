@@ -1,0 +1,27 @@
+.gallery {
+    padding-block: 60px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-container {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    columns: 3;
+    column-gap: 15px;
+    max-width: var(--max-width);
+}
+
+.gallery-container-item {
+    width: 100%;
+    /* max-width: 300px; */
+    /* height: fit-content; */
+    /* height: 100%; */
+    margin-bottom: 10px;
+}
+
+.gallery-container-item img {
+    width: 100%;
+    /* max-width: 4000px; */
+}

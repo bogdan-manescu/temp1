@@ -1,0 +1,113 @@
+.rooms {
+    padding-block: 30px;
+    padding-inline: 30px;
+}
+
+.rooms-container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.rooms-container-item {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    margin-bottom: 60px;
+    box-shadow: var(--box-shadow);
+}
+
+.rooms-container-item:last-child {
+    margin-bottom: 0;
+}
+
+.rooms-description-title {
+    font-size: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.rooms-container-item-description p {
+    margin-bottom: 10px;
+}
+
+.rooms-container-item-description p:first-child {
+    font-weight: var(--font-weight-bold);
+}
+
+.rooms-container-item-description p:last-child {
+    margin: 0;
+}
+
+.rooms-description-cta {
+    margin: 0 auto;
+}
+
+.rooms-description-cta a {
+    width: fit-content;
+}
+
+.rooms-container-item-carousel {
+    flex: 1;
+    /* width: 100%; */
+    /* height: 100px; */
+    /* width: fit-content; */
+}
+
+.rooms-container-item-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.room-carousel-slide {
+    /* height: 500px; */
+    /* width: 500px; */
+    height: fit-content;
+    margin: auto 0;
+}
+
+.room-carousel-slide > img {
+    width: 100%;
+    /* max-width: 1000px; */
+    /* height: 100%; */
+}
+
+.rooms .swiper-container {
+    height: 100%;
+    width: 50vw;
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.rooms-description-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    /* margin-top: 30px; */
+    /* flex-direction: row; */
+}
+
+.rooms-description-tag {
+    padding-block: 2px;
+    padding-inline: 5px;
+    border-radius: 5px;
+    background-color: var(--color-bg);
+    color: black;
+}
+
+.rooms-description-tag svg {
+    margin-right: 3px;
+}
+
+.rooms-description-tag svg,
+.rooms-description-tag span {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-bg);
+}
