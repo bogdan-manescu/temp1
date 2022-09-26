@@ -76,19 +76,16 @@ const Footer = () => {
                             <div className="footer-menu-line" data-aos="zoom-in-right" />
                             <h2>Meniu</h2>
                             <p className="footer-menu-item">
-                                <Link to="/">Acasa</Link>
+                                <a href="/">Acasa</a>
                             </p>
                             <p className="footer-menu-item">
-                                <Link to="/gallery">Galerie</Link>
+                                <a href="/gallery">Galerie</a>
                             </p>
                             <p className="footer-menu-item">
-                                <Link to="/rooms">Camere</Link>
+                                <a href="/rooms">Rezerva</a>
                             </p>
                             <p className="footer-menu-item">
-                                <Link to="/reservation">Rezerva</Link>
-                            </p>
-                            <p className="footer-menu-item">
-                                <Link to="/contact">Contact</Link>
+                                <a href="/contact">Contact</a>
                             </p>
                         </div>
                         <div className="footer-container-content-item">

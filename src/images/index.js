@@ -58,8 +58,9 @@ const images = {
             {
                 image: carousel1,
                 alt: "Pensiunea Gabriel din fata",
-                title: "Pensiunea Gabriel",
-                subtitle: "OAZA TA DE LINISTE SI RELAXARE",
+                title: `Pensiunea Gabriel`,
+                subtitle: "OAZA TA DE LINISTE SI RELAXARE 🌼🌼🌼🌼",
+                flowers: "💮💮💮💮",
                 cta: "REZERVA",
                 link: "#reservation",
                 anchor: true,

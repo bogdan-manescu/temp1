@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Reservations from "./Reservations";
 import RoomsContent from "./RoomsContent";
 
-const Home = () => {
+const Rooms = () => {
     return (
         <>
             <Navbar />
@@ -27,4 +27,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Rooms;

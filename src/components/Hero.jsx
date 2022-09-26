@@ -3,6 +3,7 @@ import Swiper from "react-id-swiper";
 import "../styles/hero.css";
 import "swiper/css/swiper.css";
 import { Link } from "react-router-dom";
+import FilterVintageIcon from "@mui/icons-material/FilterVintage";
 
 const Hero = ({ carousel, staticOverlay = false, staticOverlayContent = {} }) => {
     const swiperParams = {
@@ -21,8 +22,8 @@ const Hero = ({ carousel, staticOverlay = false, staticOverlayContent = {} }) =>
                 {staticOverlay && (
                     <div className="content-overlay">
                         <div className="content" data-aos="fade-down">
-                            <p className="content-subtitle">{staticOverlayContent.subtitle}</p>
                             <h1 className="content-title">{staticOverlayContent.title}</h1>
+                            <p className="content-subtitle">{staticOverlayContent.subtitle}</p>
                             <a href={`${staticOverlayContent.link}`}>
                                 <button className="content-cta" data-swiper-parallax={1000}>
                                     {staticOverlayContent.cta}
@@ -31,17 +32,33 @@ const Hero = ({ carousel, staticOverlay = false, staticOverlayContent = {} }) =>
                         </div>
                     </div>
                 )}
+                <div className="content-overlay content-arrow">
+                    <div className="content">
+                        <div id="scroll-down">
+                            <span class="arrow-down" />
+                        </div>
+                    </div>
+                </div>
                 <Swiper {...swiperParams}>
                     {carousel.map((el, idx) => (
                         <div key={idx}>
                             {!staticOverlay && (
                                 <div className="content" data-aos="fade-down">
-                                    <p className="content-subtitle" data-swiper-parallax={800}>
-                                        {el.subtitle}
-                                    </p>
                                     <h1 className="content-title" data-swiper-parallax={900}>
                                         {el.title}
                                     </h1>
+                                    {idx === 0 ? (
+                                        <div className="content-flowers" data-swiper-parallax={800}>
+                                            <FilterVintageIcon />
+                                            <FilterVintageIcon />
+                                            <FilterVintageIcon />
+                                            <FilterVintageIcon />
+                                        </div>
+                                    ) : (
+                                        <p className="content-subtitle" data-swiper-parallax={800}>
+                                            {el.subtitle}
+                                        </p>
+                                    )}
                                     {el.anchor ? (
                                         <a href={`${el.link}`}>
                                             <button

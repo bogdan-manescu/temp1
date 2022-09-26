@@ -3,7 +3,7 @@ import { grid } from "../images";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import Reservations from "./Reservations";
+// import Reservations from "./Reservations";
 import ContactContent from "./ContactContent";
 
 const Contact = () => {
