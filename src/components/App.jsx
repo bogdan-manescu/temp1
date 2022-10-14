@@ -21,7 +21,7 @@ const App = () => {
         <>
             <HelmetWrapper
                 title="Bun venit la Pensiunea Gabriel - PensiuneaGabriel.ro | Cazare in Corcova"
-                description="Traieste o experienta de patru stele la Pensiunea Gabriel. Beneficiezi de piscina in aer liber, plaja privata, zona de gratar, lunge, bucatarie, loc de joaca pentru copii, internet gratuit si parcare privata."
+                description="Traieste o experienta de patru stele la Pensiunea Gabriel. Beneficiezi de piscina in aer liber, plaja privata, zona de gratar, lounge, bucatarie, loc de joaca pentru copii, internet gratuit si parcare privata."
                 image={image}
                 url="https://pensiuneagabriel.ro/"
             />
