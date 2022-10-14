@@ -5,18 +5,16 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 // import Reservations from "./Reservations";
 import ContactContent from "./ContactContent";
-import { Helmet } from "react-helmet";
+import HelmetWrapper from "./HelmetWrapper";
 
 const Contact = () => {
     return (
         <>
-            <Helmet>
-                <title>Contact | Hai sa luam legatura - PensiuneaGabriel.ro</title>
-                <meta
-                    name="description"
-                    content="Iti stam la dispozitie pentru intrebari legate de rezervari, evenimente sau alte neclaritati. Contacteaza-ne!"
-                />
-            </Helmet>
+            <HelmetWrapper
+                title="Contact | Hai sa luam legatura - PensiuneaGabriel.ro"
+                description="Iti stam la dispozitie pentru intrebari legate de rezervari, evenimente sau alte neclaritati. Contacteaza-ne!"
+                url="https://pensiuneagabriel.ro/contact"
+            />
             <Navbar />
             <Hero
                 carousel={grid}

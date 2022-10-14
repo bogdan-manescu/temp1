@@ -9,7 +9,8 @@ import Gallery from "./Gallery";
 // import Footer from "./Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import image from "../images/house1.jpg";
+import HelmetWrapper from "./HelmetWrapper";
 
 const App = () => {
     useEffect(() => {
@@ -18,15 +19,12 @@ const App = () => {
 
     return (
         <>
-            <Helmet>
-                <title>
-                    Bun venit la Pensiunea Gabriel - PensiuneaGabriel.ro | Cazare in Corcova
-                </title>
-                <meta
-                    name="description"
-                    content="Traieste o experienta de patru stele la Pensiunea Gabriel. Beneficiezi de piscina in aer liber, plaja privata, zona de gratar, lunge, bucatarie, loc de joaca pentru copii, internet gratuit si parcare privata."
-                />
-            </Helmet>
+            <HelmetWrapper
+                title="Bun venit la Pensiunea Gabriel - PensiuneaGabriel.ro | Cazare in Corcova"
+                description="Traieste o experienta de patru stele la Pensiunea Gabriel. Beneficiezi de piscina in aer liber, plaja privata, zona de gratar, lunge, bucatarie, loc de joaca pentru copii, internet gratuit si parcare privata."
+                image={image}
+                url="https://pensiuneagabriel.ro/"
+            />
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
