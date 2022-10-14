@@ -149,6 +149,17 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
+                    <div className="footer-container-madeby">
+                        <div>
+                            <a
+                                href="http://instagram.com/tezeractmedia"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Designed by <span>TEZERACT MEDIA</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

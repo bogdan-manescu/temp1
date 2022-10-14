@@ -9,7 +9,6 @@ import bathroom5 from "./bathroom5.jpg";
 import bathroom6 from "./bathroom6.jpg";
 import bathroom7 from "./bathroom7.jpg";
 import bathroom8 from "./bathroom8.jpg";
-import bathroom9 from "./bathroom9.jpg";
 import house1 from "./house1.jpg";
 import house2 from "./house2.jpg";
 import house3 from "./house3.jpg";
@@ -39,6 +38,8 @@ import room1 from "./room1.jpg";
 import room2 from "./room2.jpg";
 import room3 from "./room3.jpg";
 import room4 from "./room4.jpg";
+import room5 from "./room5.jpg";
+import room6 from "./room6.jpg";
 import terrace1 from "./terrace1.jpg";
 import terrace2 from "./terrace2.jpg";
 import terrace3 from "./terrace3.jpg";
@@ -103,11 +104,39 @@ const images = {
             },
         ],
     },
+    twin: {
+        room: [
+            { image: room5, alt: "Dormitor de 2 persoane" },
+            { image: room6, alt: "Dormitor de 2 persoane" },
+        ],
+        bathroom: [
+            { image: bathroom1, alt: "Baie dormitor 2 persoane" },
+            { image: bathroom2, alt: "Baie dormitor 2 persoane" },
+            { image: bathroom3, alt: "Baie dormitor 2 persoane" },
+            { image: bathroom5, alt: "Baie dormitor 2 persoane" },
+            { image: bathroom6, alt: "Baie dormitor 2 persoane" },
+            { image: bathroom7, alt: "Baie dormitor 2 persoane" },
+        ],
+    },
+    king: {
+        room: [
+            { image: room1, alt: "Dormitor de 3 persoane" },
+            { image: room2, alt: "Dormitor de 3 persoane" },
+            { image: room3, alt: "Dormitor de 3 persoane" },
+            { image: room4, alt: "Dormitor de 3 persoane" },
+        ],
+        bathroom: [
+            { image: bathroom4, alt: "Baie dormitor 3 persoane" },
+            { image: bathroom8, alt: "Baie dormitor 3 persoane" },
+        ],
+    },
     rooms: [
-        { image: room1, alt: "Dormitor de 2 persoane" },
-        { image: room2, alt: "Dormitor de 2 persoane" },
-        { image: room3, alt: "Dormitor de 2 persoane" },
-        { image: room4, alt: "Dormitor de 2 persoane" },
+        { image: room1, alt: "Dormitor de 3 persoane" },
+        { image: room2, alt: "Dormitor de 3 persoane" },
+        { image: room3, alt: "Dormitor de 3 persoane" },
+        { image: room4, alt: "Dormitor de 3 persoane" },
+        { image: room5, alt: "Dormitor de 2 persoane" },
+        { image: room6, alt: "Dormitor de 2 persoane" },
     ],
     bathrooms: [
         { image: bathroom1, alt: "Baie" },
@@ -118,7 +147,6 @@ const images = {
         { image: bathroom6, alt: "Baie" },
         { image: bathroom7, alt: "Baie" },
         { image: bathroom8, alt: "Baie" },
-        { image: bathroom9, alt: "Baie" },
     ],
     kitchen: [
         { image: kitchen1, alt: "Bucatarie" },

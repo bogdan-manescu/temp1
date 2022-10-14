@@ -35,7 +35,7 @@ const Hero = ({ carousel, staticOverlay = false, staticOverlayContent = {} }) =>
                 <div className="content-overlay content-arrow">
                     <div className="content">
                         <div id="scroll-down">
-                            <span class="arrow-down" />
+                            <span className="arrow-down" />
                         </div>
                     </div>
                 </div>

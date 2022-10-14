@@ -12,6 +12,7 @@ import TvOutlinedIcon from "@mui/icons-material/TvOutlined";
 import OutdoorGrillOutlinedIcon from "@mui/icons-material/OutdoorGrillOutlined";
 import CoffeeMakerOutlinedIcon from "@mui/icons-material/CoffeeMakerOutlined";
 import WifiOutlinedIcon from "@mui/icons-material/WifiOutlined";
+import PersonIcon from "@mui/icons-material/Person";
 import "../styles/rooms.css";
 
 const Room = ({ title, description, images, tags }) => {
@@ -101,7 +102,10 @@ const RoomsContent = () => {
         ],
     };
 
-    const carousel = [...images.rooms, ...images.bathrooms];
+    const carousel = {
+        king: [...images.king.room, ...images.king.bathroom],
+        twin: [...images.twin.room, ...images.twin.bathroom],
+    };
 
     return (
         <div className="rooms" id="rooms">
@@ -110,22 +114,31 @@ const RoomsContent = () => {
                     title="Camera King Superioara"
                     description={
                         <div>
-                            <p>Dimensiune: 12 m²</p>
+                            <div className="rooms-capacity">
+                                <PersonIcon />
+                                <PersonIcon />
+                                <PersonIcon />
+                            </div>
+                            <p>Dimensiune: 18 m²</p>
                             <p>Paturi confortabile: scor 9.1 - 16 evaluari (Booking)</p>
                         </div>
                     }
-                    images={carousel}
+                    images={carousel.king}
                     tags={tags.king}
                 />
                 <Room
                     title="Camera Twin Deluxe"
                     description={
                         <div>
-                            <p>Dimensiune: 12 m²</p>
+                            <div className="rooms-capacity">
+                                <PersonIcon />
+                                <PersonIcon />
+                            </div>
+                            <p>Dimensiune: 18 m²</p>
                             <p>Paturi confortabile: scor 9.1 - 16 evaluari (Booking)</p>
                         </div>
                     }
-                    images={carousel}
+                    images={carousel.twin}
                     tags={tags.twin}
                 />
             </div>

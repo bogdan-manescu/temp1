@@ -1,4 +1,4 @@
-.react-calendar__navigation__prev2-button,
+/* .react-calendar__navigation__prev2-button,
 .react-calendar__navigation__next2-button {
     display: none;
 }
@@ -62,7 +62,6 @@
     padding-block: 90px;
     box-shadow: var(--box-shadow);
     background-color: white;
-    /* position: relative; */
 }
 
 .reservations-container-title {
@@ -130,5 +129,165 @@
 .reservations-dropdown {
     position: absolute;
     z-index: 10;
+    transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} */
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+    display: none;
+}
+
+.react-calendar__navigation {
+    margin-bottom: 0 !important;
+}
+
+.react-calendar__navigation button {
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+}
+
+.react-calendar {
+    width: 279px !important;
+    max-width: 100%;
+    background: white;
+    border: none !important;
+    font-family: var(--font-familiy-sans-serif) !important;
+    line-height: 1.125em;
+    padding: 10px;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.react-calendar__tile,
+.react-calendar__month-view__weekdays__weekday {
+    -webkit-box-shadow: 1px 0 0 0 #eee, 0 1px 0 0 #eee, 1px 1px 0 0 #eee, 1px 0 0 0 #eee inset,
+        0 1px 0 0 #eee inset;
+    box-shadow: 1px 0 0 0 #eee, 0 1px 0 0 #eee, 1px 1px 0 0 #eee, 1px 0 0 0 #eee inset,
+        0 1px 0 0 #eee inset;
+}
+
+.react-calendar__month-view__weekdays__weekday > abbr {
+    font-size: 14px !important;
+}
+
+.react-calendar__tile--now {
+    background: rgb(0, 0, 0, 0.2) !important;
+}
+
+.react-calendar__tile--active {
+    background: var(--color-secondary) !important;
+    color: white;
+}
+
+.react-calendar__month-view__weekdays {
+    background-color: var(--color-bg);
+}
+
+.reservations {
+    width: 80vw;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+}
+
+.reservations-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-inline: 90px;
+    padding-block: 90px;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    background-color: white;
+}
+
+.reservations-container-title {
+    font-family: var(--font-familiy-sans-serif);
+    font-weight: var(--font-weight-bold);
+    font-size: 24px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.reservations-container-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reservations-container-content-item {
+    position: relative;
+}
+
+.reservations-container-content-item-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block: 30px;
+    width: 240px;
+    height: 80px;
+    color: var(--color-text);
+    border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.reservations-container-content-item-inner:hover {
+    cursor: pointer;
+}
+
+.reservations-container-content-item-input,
+.reservations-container-content-item-inner span {
+    font-size: 18px;
+}
+
+.reservations-container-content-item-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+}
+
+.reservations-container-content-item-input {
+    padding-inline: 20px;
+    padding-block: 30px;
+    width: 100px;
+    height: 80px;
+    outline: none;
+    color: var(--color-text);
+    border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.reservations-container-content-item-btn {
+    color: var(--color-bg);
+    background-color: var(--color-secondary);
+}
+
+.reservations-dropdown {
+    position: absolute;
+    z-index: 10;
+    -webkit-transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
