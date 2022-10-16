@@ -93,7 +93,7 @@ const Footer = () => {
                             <h2>Ai intrebari? Ne gasesti la:</h2>
                             <p className="footer-menu-item">
                                 <EmailOutlinedIcon />
-                                <span>gabi_dur@yahoo.com</span>
+                                <span>contact@pensiuneagabriel.ro</span>
                             </p>
                             <p className="footer-menu-item">
                                 <PhoneOutlinedIcon />
